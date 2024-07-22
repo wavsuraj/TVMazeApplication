@@ -20,12 +20,14 @@ $ cd "TVMazeApplication-master"
 
 $ npm install
 
-$ npm run start 
+$ npm run start and it will run the files locally on your machine
 
 There are two routes : 
 
 1. getAllShowDetails :- It is used to fetch all data from TVMaze database using api endpoint : https://api.tvmaze.com/show and a helper function getCastDetailsByShowId present in ./controllers/castDetailsByShowId.js to fetch cast details of each TV show  and add/update records in shows collection of MongoDb
 
 2. getPaginatedShowDetails : This is the api which gives paginated response of all the show detais along with corresponding cast details .
+   It takes parameters through query params and if parameters are not passed parameters pageNumber is set to default 0 & limit to 0 to give first ten records in the ollection.
+   
 
     
