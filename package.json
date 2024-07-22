@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +17,11 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "express-rate-limit": "^7.3.1",
-    "joi": "^17.13.3",
     "lodash": "^4.17.21",
     "mongoose": "^8.5.1",
-    "node-cron": "^3.0.3"
+    "netlify-cli": "^17.33.4",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

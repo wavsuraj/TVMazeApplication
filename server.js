@@ -1,6 +1,7 @@
 
 const express = require('express');
 const app = express();
+const router = express.Router();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
@@ -37,5 +38,8 @@ app.use('/getAllShowDetails', rateLimitMiddleware, showRoute);
 app.listen(3000, () => {
     console.log("Server is listening on port 3000");
 });
+
+app.use("/.netlify/functions/app", router);
+module.exports.handler = serverless(app);
 
 module.exports = app;
