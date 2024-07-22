@@ -9,7 +9,7 @@ const rateLimitMiddleware = require('./config/rateLimiter.js');
 
 const paginatedShowRoute = require('./routes/paginatedShow.js');
 const showRoute = require('./routes/show.js');
-const getCastDetailsByShowIdRoute = require('./routes/castDetailsByShowId.js');
+// const getCastDetailsByShowIdRoute = require('./routes/castDetailsByShowId.js');
 
 
 
@@ -27,12 +27,10 @@ mongoose.connect(dbConfig.url, {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.configure(function () {
-//     app.set('db', { 'main': db, 'show': db.model('Show') })
-// })
 
 app.use('/getPaginatedShowDetails', rateLimitMiddleware, paginatedShowRoute);
 app.use('/getAllShowDetails', rateLimitMiddleware, showRoute);
+
 // app.use('/getCastDetailsByShowId', rateLimitMiddleware, getCastDetailsByShowIdRoute);
 
 
