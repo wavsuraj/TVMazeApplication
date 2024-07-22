@@ -42,4 +42,4 @@ app.listen(3000, () => {
 app.use("/.netlify/functions/app", router);
 module.exports.handler = serverless(app);
 
-module.exports = app;
+// module.exports = app;
