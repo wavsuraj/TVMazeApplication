@@ -15,9 +15,12 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     $ npm install npm -g
 
 $ git clone https://github.com/wavsuraj/TVMazeApplication.git
-    $ cd "TVMazeApplication-master"
-    $ npm install
-    $ npm run start 
+
+$ cd "TVMazeApplication-master"
+
+$ npm install
+
+$ npm run start 
 
 There are three routes : 
 1.
