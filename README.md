@@ -22,8 +22,10 @@ $ npm install
 
 $ npm run start 
 
-There are three routes : 
-1.
-2.
-3.
+There are two routes : 
+
+1. getAllShowDetails :- It is used to fetch all data from TVMaze database using api endpoint : https://api.tvmaze.com/show and a helper function getCastDetailsByShowId present in ./controllers/castDetailsByShowId.js to fetch cast details of each TV show  and add/update records in shows collection of MongoDb
+
+2. getPaginatedShowDetails : This is the api which gives paginated response of all the show detais along with corresponding cast details .
+
     

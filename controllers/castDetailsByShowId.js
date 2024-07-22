@@ -32,6 +32,7 @@ const getCastDetailsByShowId = async (showID) => {
             return tempobj;
         }) : [];
 
+        // ES6 Destructuring to sort Cast array with birthday values in descending order with null values at last  
         let sortCastDataByBirthday = apiDataByShowId.sort(({ ["birthday"]: a }, { ["birthday"]: b }) => (
             (a == null) - (b == null) // move null values to the back of the array
             || -(a > b)               // move `a` to the back if it's smaller than `b`
