@@ -2,12 +2,12 @@
 const express = require('express');
 const router = express.Router();
 
-const { castDetailsByShowId } =
+const { getCastDetailsByShowId } =
     require('../controllers/castDetailsByShowId');
 
 /* Define the routes for the CRUD operations using router.route() */
 
 router.route('/')
-    .post(castDetailsByShowId); // Read: Get all users
+    .get(getCastDetailsByShowId); // Read: Get all users
 
 module.exports = router;
